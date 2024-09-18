@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <h1>LOGIN</h1>
+            <input type="text" name="username" id="username" class="box" placeholder="Enter Username" required/>
+        
+            <input type="password" name="Password" id="password" class="box" placeholder="Enter Password" required />
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember Me</label>
+            <a href="#"> Forgot password?</a>
+        </div>
+            <input type="submit" value="LOGIN" id="submit" onclick="func(event)">
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register Here!</a></p>
+            </div>
+            </form>
+    </div>
+    <script>
+        
+        function func(event){
+            event.preventDefault();
+            var email = document.getElementById("username").value;
+            var pass = document.getElementById('password').value;
+            if (email == 'kingbob' && pass == '1234'){
+                alert("Access Granted");
+                document.body.classList.add("fade-out");
+                setTimeout(function() {
+                    window.location.assign("mp3.html");
+                }, 1000);
+            }else{
+                alert("Account not found!");
+            }
+        }
+    </script>
+</body>
+</html>
